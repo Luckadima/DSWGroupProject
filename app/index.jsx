@@ -4,7 +4,7 @@ import Onboarding from '@/Components/Onboarding';
 
 export default function Index() {
   const Login = () => {
-    router.push("/Login")
+    router.push("/Login") 
   };
 
 
