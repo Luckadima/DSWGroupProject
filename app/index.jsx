@@ -7,6 +7,10 @@ export default function Index() {
     router.push("/Login") 
   };
 
+  const Logins = () => {
+    router.push("/Login") 
+  };
+
 
   return (
     <>
