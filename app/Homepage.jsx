@@ -3,7 +3,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import * as ImagePicker from "expo-image-picker";
 import { useState } from "react";
 import { ColorPicker } from 'react-native-color-picker';
-import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function Homepage() {
 
@@ -34,6 +33,8 @@ export default function Homepage() {
     <View style={{backgroundColor: 'black', height: 250, borderRadius: 20, width:370, marginLeft: 20}}>
         <Text style={{color: 'white', marginLeft: 20, marginTop: 80, fontSize: 18}}>MR LN KADIMA</Text>
         <Text style={{color: 'white', marginLeft: 20, marginTop: 20, fontSize: 18}}>223006213</Text>
+
+        
 
     </View>
 

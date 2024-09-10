@@ -1,6 +1,5 @@
 import { View, StyleSheet, Animated, useWindowDimensions, Text } from 'react-native'
 import React from 'react'
-import Entypo from '@expo/vector-icons/Entypo';
 import { router } from 'expo-router';
 
 export default function Navslide({ data , scrollX }) {
@@ -30,7 +29,7 @@ export default function Navslide({ data , scrollX }) {
 
     </View>
 
-      <Entypo onPress={Login} style={{marginLeft:'80%', marginBottom: '20%'}} name="login" size={30} color="darkblue" />
+      <Text onPress={Login} style={{marginLeft:'80%', marginBottom: '15%', fontSize: 18, color: "darkblue"}}> Skip</Text>
 
       </>
   )
