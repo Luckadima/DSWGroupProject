@@ -15,7 +15,7 @@ export default [
     },
     {
         id: '3',
-        title: 'Take a picture of your student card',
+        title: 'Pick your prefered way to enter campus',
         description: 'Emerse yourself in the 4IR',
         image: require('./assets/images/slide3.png')
 

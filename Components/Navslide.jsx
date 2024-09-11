@@ -29,7 +29,7 @@ export default function Navslide({ data , scrollX }) {
 
     </View>
 
-      <Text onPress={Login} style={{marginLeft:'80%', marginBottom: '15%', fontSize: 18, color: "darkblue"}}> Skip</Text>
+      <Text onPress={Login} style={{marginLeft:'80%', marginBottom: '15%', fontSize: 18, color: "black"}}> Skip</Text>
 
       </>
   )
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     dot:{
         height: 10,
         borderRadius: 5,
-        backgroundColor: '#493d8a',
+        backgroundColor: 'black',
         marginHorizontal: 8,
         marginTop: 80
     }

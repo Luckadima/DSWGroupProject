@@ -23,7 +23,7 @@ function Landingpage() {
   
     return (
         <>
-        <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.gradient}>
+        <LinearGradient colors={['#FF4500', '#A9A9A9', '#000000']} style={styles.gradient}>
             <View style={styles.container}>
             <Animated.Text style={[styles.text, { opacity: fadeAnim }]}>
                 WELLCOME
@@ -52,7 +52,7 @@ function Landingpage() {
 
             <Animated.View style={{opacity: fadeAnim ,backgroundColor:'gray', width:"45%",height:'13%', borderRadius: 5, marginTop:'-23%', marginLeft:'50%', shadowColor: '#000',shadowOffset: { width: 0, height: 2 },shadowOpacity: 0.8,shadowRadius: 3,elevation: 5,}}>
                 <TouchableOpacity>
-                    <Text style={{marginLeft: '37%', marginTop: '25%'}}>bye</Text>
+                    <Text style={{marginLeft: '37%', marginTop: '25%'}}>TimeTable</Text>
                 </TouchableOpacity>
             </Animated.View>
 

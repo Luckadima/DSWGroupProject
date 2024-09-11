@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as ImagePicker from "expo-image-picker";
 import { useState } from "react";
-import { ColorPicker } from 'react-native-color-picker';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function Homepage() {
 
@@ -71,6 +71,9 @@ export default function Homepage() {
                             )}
                         </TouchableOpacity>
 
+                        
+
+
                         <TouchableOpacity
                             style={{
                                 backgroundColor: "lightgray",
@@ -82,6 +85,7 @@ export default function Homepage() {
                             }}
                             onPress={pickImage}
                         >
+
                             <Text>Add New Image</Text>
                         </TouchableOpacity>
                     </View>
