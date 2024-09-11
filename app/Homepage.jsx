@@ -42,11 +42,10 @@ export default function Homepage() {
 
     <Text></Text>
     </View>
-
-
     <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
                 <View style={{ width: "55%"}}>
+
                     <View style={{}}>
                         <TouchableOpacity
                             onPress={pickImage}
@@ -57,7 +56,7 @@ export default function Homepage() {
                                 backgroundColor: "white",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                marginTop: -468,
+                                marginTop: -250,
                                 marginLeft: 80
                             }}
                         >
@@ -71,7 +70,19 @@ export default function Homepage() {
                             )}
                         </TouchableOpacity>
 
-                        
+                    </View>
+                    
+                    </View>
+                    </View>
+            </SafeAreaView>
+
+
+            
+            <View>
+                        <Image style={{height: '30%', width:"30%", marginTop: '20%', marginLeft: '35%'}} source= {require('../assets/images/airdrop-logo.jpg')}></Image>
+                        <Text style={{marginLeft: '40%',marginTop: '5%'}} >Tap to Enter</Text>
+                    </View>
+
 
 
                         <TouchableOpacity
@@ -80,18 +91,21 @@ export default function Homepage() {
                                 justifyContent: "center",
                                 alignItems: "center",
                                 height: 50,
-                                borderRadius: 12,
-                                marginTop: 400,
+                                width: 200,
+                                borderRadius: 22,
+                                marginTop: 50,
+                                marginLeft: '25%',
+                            
                             }}
                             onPress={pickImage}
                         >
 
                             <Text>Add New Image</Text>
                         </TouchableOpacity>
-                    </View>
-                </View>
-            </View>
-        </SafeAreaView>
+
+                        
+
+          
             </>
     );
 }

@@ -46,7 +46,7 @@ function Landingpage() {
 
             <Animated.View style={{opacity: fadeAnim ,backgroundColor:'gray', width:"44%",height:'13%', borderRadius: 5, marginTop:'10%', marginLeft:'4%', shadowColor: '#000',shadowOffset: { width: 0, height: 2 },shadowOpacity: 0.8,shadowRadius: 3,elevation: 5,}}>
                 <TouchableOpacity>
-                    <Text style={{marginLeft: '37%', marginTop: '25%'}}>hello</Text>
+                    <Text style={{marginLeft: '37%', marginTop: '25%'}}>Details</Text>
                 </TouchableOpacity>
             </Animated.View>
 

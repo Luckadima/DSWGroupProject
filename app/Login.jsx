@@ -24,6 +24,19 @@ function Login() {
         setShowPassword(!showPassword);
     };
 
+    const [studentNumber, setStudentNumber] = useState('');
+    const [error, setError] = useState('');
+
+    const validateInput = () => {
+        if (studentNumber.length !== 9) {
+          setError('Student number must be 9 digits long.');
+        } else if (studentNumber !== '223006213') {
+          setError('Student number is incorrect.');
+        } else {
+          setError(''); // Clear error if validation passes
+          // Perform further actions like form submission
+        }
+      };
 
     return(
         <>
@@ -57,10 +70,16 @@ function Login() {
                                                     height: 35,
                                                     marginTop:'30%', }} 
                                                     placeholder="Enter your student number" 
-                                                    placeholderTextColor="#aaa">
+                                                    placeholderTextColor="#aaa"
+                                                    keyboardType="numeric"
+                                                    value={studentNumber}
+                                                    onChangeText={(text) => setStudentNumber(text)}>
                                                     
                                                     
                                         </TextInput>
+                                        {error ? <Text style={{ color: 'red', marginTop: 10 }}>{error}</Text> : null}
+
+                                    
                                 </View>
 
 
@@ -107,7 +126,7 @@ function Login() {
 
 
                         <Pressable onPress={Landingpage} style={{backgroundColor: 'black', width: 100, marginLeft: '35%', height: 30,borderRadius: 99, marginTop:'10%'}}>
-                            <Text style={{fontSize: 17, color: 'white', marginLeft:'25%',fontWeight:'bold', marginTop:'5%' }}>LOGIN</Text>
+                            <Text onPress={validateInput} style={{fontSize: 17, color: 'white', marginLeft:'25%',fontWeight:'bold', marginTop:'5%' }}>LOGIN</Text>
                         </Pressable>
 
 
