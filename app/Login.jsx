@@ -8,35 +8,44 @@ import CheckBox from "react-native-check-box";
 
 function Login() {
 
-      const Landingpage = () => {
-        router.push("/Landingpage")
-
+      const [showPassword, setShowPassword] = useState(false);
+      const [isChecked, setIsChecked] = useState(false);
+  
+      const toggleShowPassword = () => {
+          setShowPassword(!showPassword);
       };
 
 
 
     const [password, setPassword] = useState('');
-
-    const [showPassword, setShowPassword] = useState(false);
-    const [isChecked, setIsChecked] = useState(false);
-
-    const toggleShowPassword = () => {
-        setShowPassword(!showPassword);
-    };
+    const [errors, setErrors] = useState('');
 
     const [studentNumber, setStudentNumber] = useState('');
     const [error, setError] = useState('');
 
     const validateInput = () => {
+        let isValid = true;
+
         if (studentNumber.length !== 9) {
-          setError('Student number must be 9 digits long.');
-        } else if (studentNumber !== '223006213') {
-          setError('Student number is incorrect.');
-        } else {
-          setError(''); // Clear error if validation passes
-          // Perform further actions like form submission
-        }
-      };
+            setError('Student number must be 9 digits long.');
+          } else if (studentNumber !== '223006213') {
+            setError('Student number is incorrect.');
+          }else {
+            setError(''); // Clear error if both validations pass
+          }
+          
+          if (password.length !== 10) {
+            setErrors('Password must be 10 characters long.');
+          } else {
+            setErrors(''); // Clear error if both validations pass
+          }
+
+          if (isValid) {
+            // If both studentNumber and password are valid, navigate to Landingpage
+            router.push("/Landingpage");
+          }
+
+        };
 
     return(
         <>
@@ -77,10 +86,9 @@ function Login() {
                                                     
                                                     
                                         </TextInput>
-                                        {error ? <Text style={{ color: 'red', marginTop: 10 }}>{error}</Text> : null}
-
-                                    
+                                        {error ? <Text style={{ color: 'red', marginTop: '40%', marginLeft:'-78%' }}>{error}</Text> : null}
                                 </View>
+                                
 
 
 
@@ -102,7 +110,7 @@ function Login() {
                                                     }}
                                         placeholder="Enter your password"
                                         placeholderTextColor="#aaa"
-                                        keyboardType="numeric"
+                                        keyboardType="text"
                                         /> 
                                         <MaterialCommunityIcons
                                         name={showPassword ? 'eye-off' : 'eye'}
@@ -111,6 +119,7 @@ function Login() {
                                         style={styles.icon}
                                         onPress={toggleShowPassword}
                                         />
+                                        {errors ? <Text style={{ color: 'red', marginTop: '10%', marginLeft:'-83%' }}>{errors}</Text> : null}
                             </View>
 
                         <View style={{flexDirection:'row', marginTop: 40, marginLeft: 20}}>
@@ -125,7 +134,7 @@ function Login() {
                         </View>
 
 
-                        <Pressable onPress={Landingpage} style={{backgroundColor: 'black', width: 100, marginLeft: '35%', height: 30,borderRadius: 99, marginTop:'10%'}}>
+                        <Pressable  style={{backgroundColor: 'black', width: 100, marginLeft: '35%', height: 30,borderRadius: 99, marginTop:'10%'}}>
                             <Text onPress={validateInput} style={{fontSize: 17, color: 'white', marginLeft:'25%',fontWeight:'bold', marginTop:'5%' }}>LOGIN</Text>
                         </Pressable>
 
